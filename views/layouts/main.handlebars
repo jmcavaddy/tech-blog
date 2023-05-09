@@ -2,27 +2,29 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <div>
-        <a id="logo" href="/">
-          Tech Blog!
-        </a>
+    <header id="header" class="display-flex justify-space-between align-center p-2 flex-column">
+        <div>
+            <a id="logo" href="/">Tech Blog!</a>
+        </div>
+        <nav id="nav" class="display-flex justify-space-between align-center">
+            <a href="/">Homepage</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/login">Login</a>
+            <a href="/signup">Sign Up</a>
+        </nav>
     </header>
-    <main class="container container-fluid mt-5">
-      {{{ body }}}
+    <main id="main" class="container container-fluid mt-5">
+        {{{ body }}}
     </main>
-    <footer>
-      
-    </footer>
   </div>
 </body>
 

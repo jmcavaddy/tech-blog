@@ -1,3 +1,26 @@
+:root {
+    --main-color: #652a0e;
+    --secondary-color: #93E9BE;
+  }
+
 #logo {
-    background-color: blue;
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin: auto;
+}
+
+#nav {
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+#header {
+    background-color: var(--main-color);
+}
+
+#nav a {
+    color: var(--secondary-color);
 }
