@@ -31,4 +31,4 @@ Post.hasMany(Comment, {
 
 
 
-module.exports = { User, Post };
+module.exports = { User, Post, Comment };
