@@ -56,3 +56,13 @@
 .homepage-post a {
     color: var(--secondary-color);
 }
+
+.no-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 100%;
+  }

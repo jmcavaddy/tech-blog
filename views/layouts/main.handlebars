@@ -18,14 +18,22 @@
         <nav id="nav" class="display-flex justify-space-between align-center">
             <a href="/">Homepage</a>
             <a href="/dashboard">Dashboard</a>
+            {{#if logged_in}}
+            <button class="no-button" id="logout">Logout</button>
+            {{else}}
             <a href="/login">Login</a>
             <a href="/signup">Sign Up</a>
+            {{/if}}
         </nav>
     </header>
     <main id="main" class="container container-fluid mt-5">
         {{{ body }}}
     </main>
   </div>
+
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
