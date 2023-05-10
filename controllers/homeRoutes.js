@@ -25,13 +25,14 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
    
-// GET user's info for dashboard
+// GET user's info and posts for dashboard
 // Use withAuth middleware to prevent access to route
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
+      include: [{ model: Post }],
     });
 
     const user = userData.get({ plain: true });

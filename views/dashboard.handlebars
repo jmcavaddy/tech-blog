@@ -4,9 +4,27 @@
   </div>
   <div>
     <a href="/newPost">
-      <button class="btn btn-primary">Create Post</button>
+      <button class="btn btn-dashboard">Create Post</button>
     </a>
   </div>
+</div>
+
+{{!-- Render a user's saved posts with an href to editPost and the date the post was created --}}
+
+<div>
+  <h3>Your Posts:</h3>
+  {{#each posts as |post|}}
+  <a href="/editPost/{{post.id}}">
+    <div class="dashboard-post row mb-2">
+      <div class="col-md-8">
+        <h4>{{post.title}}</h4>
+      </div>
+      <div class="col-md-4">
+        <p>{{format_date post.date_created}}</p>
+      </div>
+    </div>
+  </a>
+  {{/each}}
 </div>
 
 {{!-- <div class="row mt-4">
@@ -50,4 +68,4 @@
   {{/if}}
 </div>
 
-<script src="./js/profile.js"></script> --}}
+<script src="./js/dashboard.js"></script> --}}
