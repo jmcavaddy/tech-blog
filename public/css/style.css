@@ -44,3 +44,15 @@
     border-radius: 0.5rem;
     margin: 1rem;
 }
+
+.homepage-post {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.homepage-post a {
+    color: var(--secondary-color);
+}

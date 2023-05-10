@@ -1,1 +1,16 @@
-<p>this is homepage</p>
+
+{{!-- Display all posts; if the user clicks on a post, direct them to viewPost if they are
+logged in, and login if they are not logged in --}}
+
+{{#each posts as |post|}}
+<div class="row mb-3 homepage-post">
+  <div class="col-md-8">
+    <a href="/viewPost/{{post.id}}">
+      <h4>{{post.title}}</h4>
+    </a>
+  </div>
+  <div class="col-md-4">
+    <p>Created on {{format_date post.date_created}} by {{post.user.username}}</p>
+  </div>
+</div>
+{{/each}}
