@@ -72,4 +72,25 @@ router.get('/newPost', withAuth, async (req, res) => {
   }
 });
 
+// GET editPost page
+router.get('/editPost/:id', withAuth, async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id);
+
+    if (!postData) {
+        res.status(404).json({ message: 'No post found with this id!' });
+        return;
+    }
+
+    const post = postData.get({ plain: true });
+
+    res.render('editPost', {
+      ...post,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

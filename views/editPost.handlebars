@@ -1,0 +1,21 @@
+<h2>Edit or delete a post</h2>
+
+<form class="form editPost-form">
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input class="form-input" type="text" id="title" value="{{title}}" />
+  </div>
+  <div class="form-group">
+    <label for="body">Body:</label>
+    <textarea class="form-input" type="text" id="body" >{{body}}</textarea>
+  </div>
+</form>
+  <div class="form-group pb-3">
+    <button class="updatePost-button btn btn-primary" data-id="{{id}}">Update</button>
+  </div> 
+  <div class="form-group">
+    <button class="deletePost-button btn btn-primary" data-id="{{id}}">Delete</button>
+  </div> 
+
+
+<script src="/js/editPost.js"></script>
