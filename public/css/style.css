@@ -63,6 +63,61 @@
     padding: 0;
     cursor: pointer;
     color: var(--secondary-color);
-    text-decoration: none;
     font-size: 100%;
   }
+
+.viewPost-post {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.comment-box {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.comment-form {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.comment-form button {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.comment-form textarea {
+    /* background-color: var(--main-color); */
+    /* color: var(--secondary-color); */
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+/* .comments-area {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+} */
+
+.login-to-comment {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}

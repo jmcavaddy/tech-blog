@@ -93,4 +93,44 @@ router.get('/editPost/:id', withAuth, async (req, res) => {
   }
 });
 
+// GET viewPost page
+router.get('/viewPost/:id', async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: Comment,
+          attributes: ['body', 'date_created', 'user_id'],
+          include: [
+            {
+              model: User,
+              attributes: ['username'],
+            },
+          ],
+        },
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
+    });
+
+    if (!postData) {
+        res.status(404).json({ message: 'No post found with this id!' });
+        return;
+    }
+
+    const post = postData.get({ plain: true });
+
+    console.log(post);
+
+    res.render('viewPost', {
+      ...post,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

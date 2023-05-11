@@ -1,0 +1,40 @@
+<div class="viewPost-post" data-id="{{id}}">
+    <h2>{{title}} by {{user.username}} on {{format_date date_created}}</h2>
+
+    <div class="post">
+    <p>{{body}}</p>
+    </div>
+</div>
+
+{{!-- If the user is logged in give them a form to add a comment at the bottom of a list of the other comments. If
+the user is not logged in, give them a message that says "Login to comment on this post" and links them to the 
+login page --}}
+
+{{!-- If there are comments, display them. If there are no comments, display a message that says "No comments yet" --}}
+<div class="comments-area">
+    <div class="viewPost-comments">
+        {{#if comments}}
+        <h3>Comments</h3>
+            {{#each comments as |comment|}}
+                <div class="comment-box">
+                    <p>{{comment.body}}</p>
+                    <h5>By {{user.username}} on {{format_date comment.date_created}}</h5>
+                </div>
+            {{/each}}
+        {{else}}
+        <h3>No comments yet</h3>
+        {{/if}}
+    </div>
+
+    {{#if logged_in}}
+        <form class="comment-form display-flex justify-space-between">
+            <textarea name="body" placeholder="Comment on this post" id="new-comment-body"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        {{else}}
+        <p class="login-to-comment"><a href="/login">Login</a> to comment on this post</p>
+
+    {{/if}}
+</div>  
+
+<script src="/js/viewPost.js"></script>
