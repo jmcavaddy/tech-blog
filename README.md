@@ -12,6 +12,7 @@ I created Tech Blog as a place for developers to discuss topics and technologies
   - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)
+  - [Preview](#preview)
   - [Questions](#questions)
 
 ## Installation
@@ -29,6 +30,10 @@ Contact me on GitHub to contribute to this project.
 
 ## Tests
 There are currently no tests available for Tech Blog.
+
+## Preview
+Preview of Tech Blog:
+![Screenshot of Tech Blog homepage](assets/tech-blog-preview.png)
 
 ## Questions
 Contact me with questions regarding this software and view more of my work at my [GitHub page](https://github.com/jmcavaddy)!
